@@ -1,0 +1,14 @@
+{"dreamCatchers":[
+    {"id":1, "title":"Removes negitivity", "imagepath":"../assets/d1.jpg", "cost": "₹ 600", "dilevaryDate":"21-12-2022"},
+    {"id":2, "title":"spreads the positivity", "imagepath":"../assets/d2.jpg", "cost":"₹ 700", "dilevaryDate":"01-11-2022"},
+    {"id":3, "title":"Makes peaceful", "imagepath":"../assets/d3.jpg", "cost":"₹-2000", "dilevaryDate":"2-10-2022"},
+    {"id":4, "title":"Removes the sadness", "imagepath":"../assets/d4.jpg", "cost":"₹ 800", "dilevaryDate":"3-09-2022"},
+    {"id":5, "title":"Feels better", "imagepath":"../assets/d5.jpg", "cost":"₹ 900", "dilevaryDate":"4-08-2022"},
+    {"id":6, "title":"Fills the Josh", "imagepath":"../assets/d6.jpg", "cost":"₹ 500", "dilevaryDate":"5-07-2022"},
+    {"id":7, "title":"Clears the disapoints ", "imagepath":"../assets/d7.jpg", "cost":"₹ 300", "dilevaryDate":"6-06-2022"},
+    {"id":8, "title":"Get positive dreams", "imagepath":"../assets/d8.jpg", "cost":"₹ 800", "dilevaryDate":"7-05-2022"},
+    {"id":9, "title":"Fill with positivity", "imagepath":"../assets/d9.jpg", "cost":"₹ 1000", "dilevaryDate":"8-04-2022"},
+    {"id":10, "title":"Make you strong", "imagepath":"../assets/d10.jpg", "cost":"₹ 1200", "dilevaryDate":"9-03-2022"},
+    {"id":10, "title":"Make you calm", "imagepath":"../assets/d11.jpg", "cost":"₹ 1400", "dilevaryDate":"10-01-2022"},
+    {"id":10, "title":"Make you peace", "imagepath":"../assets/d12.jpg", "cost":"₹ 1600", "dilevaryDate":"11-02-2022"}
+]}
