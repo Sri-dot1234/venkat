@@ -16,6 +16,11 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LogoutComponent } from './logout/logout.component';
+import { OrderdreamcaptureComponent } from './orderdreamcapture/orderdreamcapture.component';
+import { ListofordersComponent } from './listoforders/listoforders.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,11 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent,
+    LogoutComponent,
+    OrderdreamcaptureComponent,
+    ListofordersComponent
   ],
   imports: [
     BrowserModule,

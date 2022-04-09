@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Dream';
-  
+ 
+  getDate:Date = new Date()
+
+  getMonth(month:any){
+     this.getDate = month.target.value;
+     console.log(this.getDate, month.target.value)
+  }
+
 }

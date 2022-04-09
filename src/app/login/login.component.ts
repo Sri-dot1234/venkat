@@ -8,17 +8,27 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router:Router) { }
-
-  ngOnInit(): void {
-  }
-  public loginValid = true;
+  
+  public loginForm:any = true
+  public loginValid :any
   public username = '';
   public password = '';
+  loginSuccessfull:boolean = false;
+  constructor(private router:Router){
 
+  }
+  ngOnInit(): void {
+    
+  }
   onSubmit(){
     if(this.username==="venkatesh" &&this.password==="venkatesh"){
-       this.router.navigate (['home'])
+      alert("Sravani Jullapally you have logged in succesfully")
+      this.router.navigate (['navbar'])
+      this.loginSuccessfull = true
+      
+    }
+    else{
+      alert("You have entered the wrong credentials")
     }
   }
 

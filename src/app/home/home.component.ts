@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DreamcatcherService } from '../dreamcatcher.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { DreamcatcherService } from '../dreamcatcher.service';
 })
 export class HomeComponent implements OnInit {
   dreamCatchers:any
-  constructor(private dreamCatcherservice : DreamcatcherService) { }
+  constructor(private dreamCatcherservice : DreamcatcherService, private router: Router) { }
 
   ngOnInit(): void {
 // this.dreamCatcherservice.getDreamcatcher().subscribe((data)=>console.log(data))
@@ -19,6 +20,10 @@ console.log("Hello world")
 
   }
   getDreamCatcherObject(){
-  this.dreamCatcherservice.getDreamcatcher().subscribe((data)=>this.dreamCatchers = data)
+  this.dreamCatcherservice.getDreamcatchers().subscribe((data)=>this.dreamCatchers = data)
+  }
+  postDreamCaptureOrder(id:any){
+    this.router.navigate(['orderdream', id])
+
   }
 }
