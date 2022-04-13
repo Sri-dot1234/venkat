@@ -10,17 +10,22 @@ import { DreamcatcherService } from '../dreamcatcher.service';
 })
 export class OrderdreamcaptureComponent implements OnInit {
   id: any;
-  dreamCather:any;
+  dreamCather:any = {};
   constructor(private route: ActivatedRoute, private dreamCatcherservice: DreamcatcherService, private router: Router) { }
 
   ngOnInit(): void {
     
     this.id = this.route.snapshot.params['id'];
     
-    this.dreamCatcherservice.getDreamcapture(this.id)
+    this.dreamCatcherservice.getDreamcatchers()
       .subscribe(data => {
-        console.log(data)
-        this.dreamCather = data;
+        for(let i in data){
+          debugger
+          if(i === this.id){
+            this.dreamCather = {...data[i],id:i}
+          };
+          console.log(typeof this.id)
+  }
       }, error => console.log(error));
     
   }
@@ -28,16 +33,16 @@ export class OrderdreamcaptureComponent implements OnInit {
     this.dreamCatcherservice.postDreamcapture(this.dreamCather)
       .subscribe(data => {
         console.log(data);
-        this.dreamCather= new Dreamcatcher();
+        this.dreamCather = new Dreamcatcher();
         this.gotolistofdreamcapture();
       }, error => console.log(error));
-      alert(" your delivery has been posted successfully")
+      alert(" your order is delivered successfully")
       this.router.navigate(['navbar'])
       // this.gotolistofdreamcapture()
   }
 
   gotolistofdreamcapture(){
-  this.router.navigate(['home'])
+    this.router.navigate(['home'])
   }
   
 }

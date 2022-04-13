@@ -8,15 +8,19 @@ import { DreamcatcherService } from '../dreamcatcher.service';
   styleUrls: ['./listoforders.component.css']
 })
 export class ListofordersComponent implements OnInit {
-  orderedDreamcaptureList:any
+  orderedDreamcaptureList:any = []
   constructor(private dreamCatcherservice: DreamcatcherService, private router:Router) { }
 
   ngOnInit(): void {
     this.getOrderedDreamCapture()
   }
   getOrderedDreamCapture(){
-     this.dreamCatcherservice.getOrderedDreamcatchers().subscribe((data)=>{this.orderedDreamcaptureList=data
-                                                            console.log(this.orderedDreamcaptureList)})
+     this.dreamCatcherservice.getOrderedDreamcatchers().subscribe((data)=>{
+      for(let i in data){
+        this.orderedDreamcaptureList.push({...data[i],id:i});
+        console.log({id:i,...data[i]})
+}
+       console.log(this.orderedDreamcaptureList)})
   }
   deleteOrderedDreamCapture(id: number) {
     this.dreamCatcherservice.deleteDreamCapture(id)

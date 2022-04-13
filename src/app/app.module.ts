@@ -15,11 +15,15 @@ import {MatCardModule} from '@angular/material/card';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LogoutComponent } from './logout/logout.component';
 import { OrderdreamcaptureComponent } from './orderdreamcapture/orderdreamcapture.component';
 import { ListofordersComponent } from './listoforders/listoforders.component';
+import { AdminComponent } from './admin/admin.component';
+import { CreatedreamcaptureComponent } from './createdreamcapture/createdreamcapture.component';
+import {MatIconModule} from '@angular/material/icon';
+import { UserauthGuard } from './userauth.guard';
 
 
 @NgModule({
@@ -32,7 +36,9 @@ import { ListofordersComponent } from './listoforders/listoforders.component';
     NavbarComponent,
     LogoutComponent,
     OrderdreamcaptureComponent,
-    ListofordersComponent
+    ListofordersComponent,
+    AdminComponent,
+    CreatedreamcaptureComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +51,12 @@ import { ListofordersComponent } from './listoforders/listoforders.component';
     FlexLayoutModule,
     HttpClientModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [UserauthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

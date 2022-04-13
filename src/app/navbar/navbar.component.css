@@ -10,3 +10,10 @@
 .content{
     padding: 16px;
 }
+/* .admin-last{
+    text-align: end;
+} */
+.spacer1{
+    text-align: end;
+    padding: 0px 0px 0px 150px;
+}

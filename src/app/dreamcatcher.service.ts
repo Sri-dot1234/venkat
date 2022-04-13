@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
 })
 export class DreamcatcherService {
   
- private apiUrl:any='http://localhost:3000/dreamCatchers'
- private apiUrl1:any='http://localhost:3000/orderedDreamCaptures'
+ private apiUrl:any='https://dream-cacher-default-rtdb.firebaseio.com/post.json'
+ private apiUrl1:any='https://dream-cacher-default-rtdb.firebaseio.com/post1.json'
 
   constructor(private http:HttpClient) { }
 
@@ -15,6 +15,9 @@ export class DreamcatcherService {
 
     return this.http.get(this.apiUrl)
 
+  }
+  postDreamcaptureByOwner(id: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}`,id);
   }
   postDreamcapture(id: any): Observable<any> {
     return this.http.post(`${this.apiUrl1}`,id);
