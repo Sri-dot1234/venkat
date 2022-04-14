@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
 import { CreatedreamcaptureComponent } from './createdreamcapture/createdreamcapture.component';
+import { CreateuserComponent } from './createuser/createuser.component';
 import { HomeComponent } from './home/home.component';
 import { ListofordersComponent } from './listoforders/listoforders.component';
 import { LoginComponent } from './login/login.component';
@@ -13,7 +14,9 @@ import { OrderdreamcaptureComponent } from './orderdreamcapture/orderdreamcaptur
 import { UserauthGuard } from './userauth.guard';
 
 const routes: Routes = [{path:'',redirectTo:'login',pathMatch:'full'},
-                        {path:"login", component:LoginComponent},{path:"orderdream/:id", component:OrderdreamcaptureComponent},
+                        {path:"login", component:LoginComponent},
+                        {path:"orderdream/:id", component:OrderdreamcaptureComponent},
+                        {path:"signup", component:CreateuserComponent},
                         {path:"createdream", component:CreatedreamcaptureComponent},
                         {path:"navbar", component : NavbarComponent, canActivate:[UserauthGuard],children:[{path:"home", component:HomeComponent},
                         {path:"about", component:AboutComponent},

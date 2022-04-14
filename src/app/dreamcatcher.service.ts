@@ -8,6 +8,7 @@ export class DreamcatcherService {
   
  private apiUrl:any='https://dream-cacher-default-rtdb.firebaseio.com/post.json'
  private apiUrl1:any='https://dream-cacher-default-rtdb.firebaseio.com/post1.json'
+ private apiUrlUsers:any = 'https://dream-cacher-default-rtdb.firebaseio.com/Users.json'
 
   constructor(private http:HttpClient) { }
 

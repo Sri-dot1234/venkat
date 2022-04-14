@@ -24,6 +24,7 @@ import { AdminComponent } from './admin/admin.component';
 import { CreatedreamcaptureComponent } from './createdreamcapture/createdreamcapture.component';
 import {MatIconModule} from '@angular/material/icon';
 import { UserauthGuard } from './userauth.guard';
+import { CreateuserComponent } from './createuser/createuser.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { UserauthGuard } from './userauth.guard';
     OrderdreamcaptureComponent,
     ListofordersComponent,
     AdminComponent,
-    CreatedreamcaptureComponent
+    CreatedreamcaptureComponent,
+    CreateuserComponent
   ],
   imports: [
     BrowserModule,

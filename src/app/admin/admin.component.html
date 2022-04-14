@@ -2,7 +2,7 @@
 <div [hidden]="loginSuccessfull">
     <mat-card >
       <mat-card-content>
-        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()" autocomplete="off">
           <h2>Log In</h2>
           <mat-error *ngIf="!loginValid">
             The username and password were not recognized

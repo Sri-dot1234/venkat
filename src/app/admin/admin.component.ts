@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -13,12 +14,25 @@ export class AdminComponent implements OnInit {
   public username = '';
   public password = '';
   loginSuccessfull:boolean = false;
-  constructor(private router:Router) { }
+  getAdminList:any = []
+  constructor(private router:Router, private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getAdminData()
   }
+  getAdminData(){
+    this.http.get<any>('https://dream-cacher-default-rtdb.firebaseio.com/Users.json').subscribe((data)=>{
+     for(let i in data){
+       
+       this.getAdminList.push({...data[i],id:i});
+       console.log({id:i,...data[i]})
+}
+    })
+ }
   onSubmit(){
-    if(this.username==="sravani" &&this.password==="sravani"){
+    let data = this.getAdminList.find((value:any)=>value.fullName===this.username)
+
+    if(data && data.password === this.password){
       alert("Sravani Jullapally you have logged in succesfully")
       this.router.navigate (['createdream'])
       this.loginSuccessfull = true
